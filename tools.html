@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<style>
+
+		body.light {
+
+			background-color: white;
+			color: black;
+
+		}
+
+		body.dark {
+
+			background-color: #1a1a1a;
+			color: white;
+
+		}
+
+		body.cyber {
+
+			background-color: #0f172a;
+			color: #38bdf8;
+
+		}
+
+	</style>
+
+	<title>Tools & Labs | Cybersecurity Hub</title>
+	<link rel="icon" href="images/favicon.png">
+
+</head>
+
+<body class="light">
+
+	<!-- Navigation Bar -->
+
+	<nav>
+
+		<p>
+
+			<a href="index.html">Home</a> |
+			<a href="tools.html">Tools</a> |
+			<a href="contact.html">Contact</a>
+
+		</p>
+
+	</nav>
+
+	<!-- Main Image of the page with centered title -->
+
+	<h1 align="center">Cybersecurity Tools & Labs</h1>
+
+	<p align="center">
+
+		<img src="images/main_tools.jpg" alt="Cybersecurity tools main image" width="100%" height="500">
+
+	</p>
+
+	<!-- Intro Paragraph -->
+
+	<p>
+
+		Hands-on practice is essential in cybersecurity. Learning tools and applying concepts in real environments helps develop practical skills required for threat detection, vulnerability analysis and system protection.
+
+	</p>
+
+	<!-- Local Video -->
+
+	<h2>Hands-On Cybersecurity in Action</h2>
+
+	<p align="center">
+
+		<video width="600" height="350" controls>
+
+			<source src="videos/lab_demo.mp4" type="video/mp4">
+
+			Your browser does not support the video tag.
+
+		</video>
+
+	</p>
+
+	<!-- Audio Section -->
+
+	<h2>Why Practical Experience Matters in Cybersecurity?</h2>
+
+	<p>
+
+		<audio controls>
+
+			<source src="audio/lab_intro.mp3" type="audio/mpeg">
+
+			Your browser does not support the audio element.
+
+		</audio>
+
+	</p>
+
+	<!-- Table: Beginner Tool -->
+
+	<h2>Beginner Cybersecurity Tools</h2>
+
+	<table id="toolsTable" border="1" width="100%">
+
+  	<tr>
+
+    	<th>Tool Name</th>
+    	<th>Purpose</th>
+
+  	</tr>
+
+  	<tr>
+
+    	<td>Wireshark</td>
+    	<td>Network traffic analysis and packet inspection</td>
+
+  	</tr>
+
+  	<tr>
+
+    	<td>Nmap</td>
+    	<td>Network scanning and port discovery</td>
+
+  	</tr>
+
+  	<tr>
+
+    	<td>Metasploit</td>
+    	<td>Penetration testing and vulnerability exploitation</td>
+
+  	</tr>
+
+  	<tr>
+
+    	<td>Burp Suite</td>
+    	<td>Web application security testing</td>
+
+  	</tr>
+
+	</table>
+
+
+	<!-- Small Lab Diagram -->
+
+	<p align="center">
+
+		<img src="images/tools_diagram.jpg" alt="Cybersecurity lab diagram" width="350" height="200">
+
+	</p>
+
+	<!-- Link to all useful tools website -->
+
+	<h2>Useful Tools Website</h2>
+
+	<p>
+
+  	<a href="https://www.wireshark.org" target="_blank">
+
+    	Click here to learn more about Wireshark
+
+  	</a> <br> <br>
+
+  	<a href="https://nmap.org" target="_blank">
+
+    	Click here to learn more about Nmap
+
+  	</a> <br> <br>
+
+  	<a href="https://www.metasploit.com" target="_blank">
+
+    	Click here to learn more about Metasploit
+
+  	</a> <br> <br>
+
+  	<a href="https://portswigger.net/burp" target="_blank">
+
+    	Click here to learn more about Burp Suite
+
+  	</a> <br> <br>
+
+	</p>
+
+	<h2> Choose a Colour Theme </h2>
+
+	<button onclick="setTheme('light')">Light Mode</button>
+	<button onclick="setTheme('dark')">Dark Mode</button>
+	<button onclick="setTheme('cyber')">Cyber Blue Mode</button>
+
+	<!-- Footer Section of the page -->
+
+	<footer>
+
+		<p align="right">&copy; 2026 Moussa Traore</p>
+
+		<!-- Using official social media websites as placeholders, not my personal account -->
+
+		<p align="right"> 
+
+			<a href="https://www.linkedin.com" target="_blank">
+
+				<img src="images/linkedin.png" alt="LinkedIn" width="30" height="30">
+
+			</a>
+
+			<a href="https://www.github.com" target="_blank">
+
+				<img src="images/github.png" alt="GitHub" width="30" height="30">
+
+			</a>
+
+		</p>
+
+	</footer>
+
+	<script>
+
+		// Function to switch website color theme
+
+		function setTheme(theme) {
+
+			document.body.className = theme;
+
+		}
+
+	</script>
+
+	<script>
+
+		// Highlight beginner tools in the table with a special background color
+		const table = document.getElementById('toolsTable');
+		const beginnerTools = ['Wireshark', 'Nmap'];
+
+		for (let i = 1; i < table.rows.length; i++) {
+
+			let toolName = table.rows[i].cells[0].textContent;
+
+			// If the tool is in the beginnerTools list, change its row color
+			
+			if (beginnerTools.includes(toolName)) {
+
+				table.rows[i].style.backgroundColor = '#d4f4dd';
+			}
+
+		}
+
+	</script>
+
+</body>
+
+</html> 

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<style>
+
+		body.light {
+
+			background-color: white;
+			color: black;
+
+		}
+
+		body.dark {
+
+			background-color: #1a1a1a;
+			color: white;
+
+		}
+
+		body.cyber {
+
+			background-color: #0f172a;
+			color: #38bdf8;
+
+		}
+
+	</style>
+
+	<title>Home | Cybersecurity Hub</title>
+	<link rel="icon" href="images/favicon.png">
+
+</head>
+
+<body class="light">
+
+	<!-- Navigation Bar -->
+
+	<nav>
+
+		<p>
+
+			<a href="index.html">Home</a> |
+			<a href="tools.html">Tools</a> |
+			<a href="contact.html">Contact</a>
+
+		</p>
+
+	</nav>
+
+	<!-- Main Image of the page with centered title -->
+
+	<h1 align="center">Welcome to My Cybersecurity Learning Hub</h1>
+
+	<p align="center">
+
+		<img src="images/main_home.jpg" alt="Cybersecurity themed image" width="100%" height="500">
+
+	</p>
+
+	<!-- Intro Paragraph -->
+
+	<p>
+
+		I am a computer science student with a strong interest in cybersecurity. This website serves as a resource hub for beginners who want to start learning about cybersecurity concepts, tools, and career paths.
+
+	</p>
+
+	<!-- Quick Links Section / Mini Overview -->
+
+	<h2>Explore Cybersecurity Tools</h2>
+
+	<p align="center">
+
+		<a href="tools.html" id="toolsLink" onclick="notifyUser(event, 'tools.html', 'Tools & Labs')">
+
+			<img src="images/tools_icon.png" alt="Tools & Labs" width="120" height="120">
+
+		</a> <br>
+
+		Tools & Labs
+
+	</p>
+
+	<p> Do not wait and start learning on how to have hands-on practice in Cybersecurity </p>
+
+	<h2> Choose a Colour Theme </h2>
+
+	<button onclick="setTheme('light')">Light Mode</button>
+	<button onclick="setTheme('dark')">Dark Mode</button>
+	<button onclick="setTheme('cyber')">Cyber Blue Mode</button>
+
+	<!-- Footer Section of the page -->
+
+	<footer>
+
+		<p align="right">&copy; 2026 Moussa Traore</p>
+
+		<!-- Using official social media websites as placeholders, not my personal account -->
+
+		<p align="right"> 
+
+			<a href="https://www.linkedin.com" target="_blank">
+
+				<img src="images/linkedin.png" alt="LinkedIn" width="30" height="30">
+
+			</a>
+
+			<a href="https://www.github.com" target="_blank">
+
+				<img src="images/github.png" alt="GitHub" width="30" height="30">
+
+			</a>
+
+		</p>
+
+	</footer>
+
+	<script>
+
+		// Function to show a notification before navigating to another page
+
+		function notifyUser(event, url, sectionName) {
+
+			event.preventDefault();
+			alert(`You are navigating to the ${sectionName} page!`);
+			window.location.href = url;
+		}
+
+		// Function to switch website color theme
+
+		function setTheme(theme) {
+
+			document.body.className = theme;
+
+		}
+
+	</script>
+
+	<script>
+
+		// Display a greeting message based on current time
+		const hour = new Date().getHours();
+		let message;
+
+		if (hour < 12) {
+
+			message = "Good morning! Welcome to the Cybersecurity Hub";
+
+		}
+
+		else if (hour < 18) {
+
+			message = "Good afternoon! Ready to explore cybersecurity tools?";
+
+		}
+
+		else {
+
+			message = "Good evening! Keep learning cybersecurity";
+		}
+
+		alert(message);
+
+	</script>
+
+</body>
+
+</html> 
